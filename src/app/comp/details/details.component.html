@@ -1,0 +1,12 @@
+<ng-container *ngIf="product">
+  <p>{{ product.name }}</p>
+  <p>{{ product.price | currency }}</p>
+  <p>{{ product.description }}</p>
+</ng-container>
+<mat-card-actions>
+  <button color="warn" mat-raised-button (click)="addToBasket(product)">
+    <span class=" material-icons">
+      add_shopping_cart
+    </span>
+  </button>
+</mat-card-actions>

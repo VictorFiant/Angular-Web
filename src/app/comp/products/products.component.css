@@ -1,0 +1,10 @@
+.image_prod {
+    width: 100%;
+  }
+  .example-card {
+    max-width:700px;
+  }
+  .example-header-image {
+    background-image: image();
+    background-size: cover;
+  }
