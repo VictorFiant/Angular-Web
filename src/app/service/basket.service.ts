@@ -1,26 +1,36 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Product } from '../product.model';
-
+import { HttpClient } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
 export class BasketService {
 
-  basketItems = [];
+  
+  items : any[] = [];
   
 
-  constructor() { }
-
-  addItem( product : Product ) {
-    const exist = this.basketItems.find((item) => {
-      return item === product.id;
-    });
-
-    if(exist)
-      exist
-    else
-      this.basketItems.push();
-
-      console.log(this.basketItems)
+  constructor(
+    private http: HttpClient
+  ) {
+    
   }
+
+  addToBasket(product : Product) {
+    this.items.push(product)
+  }
+  getItems(){
+      return this.items;
+  }
+
+  clearBasket(){
+      this.items = [];
+      return this.items;
+  }
+
+   
+
+
 }
+

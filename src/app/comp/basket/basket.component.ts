@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BasketService } from 'src/app/service/basket.service';
+
+
 
 
 @Component({
@@ -7,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
-
   
+  
+  items = this.basketService.getItems()
 
   constructor(
+    private basketService : BasketService
    ) {
   }
 
@@ -18,7 +23,4 @@ export class BasketComponent implements OnInit {
     
   }
 
-  
-
-  
 }

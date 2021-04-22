@@ -27,7 +27,8 @@ import { DetailsComponent } from './comp/details/details.component';
 import { ProductsComponent } from './comp/products/products.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BasketComponent } from './comp/basket/basket.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+
 
 
 

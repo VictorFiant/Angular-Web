@@ -11,7 +11,7 @@ import { Product } from '../../product.model';
 })
 export class DetailsComponent implements OnInit {
 
-  product : Product;
+  product : Product ;
   displayedImg = 0;
 
   constructor(
@@ -36,8 +36,8 @@ export class DetailsComponent implements OnInit {
   }
 
   addToBasket(product: Product) {
-    this.basketSrv.addItem(product)
-
+    this.basketSrv.addToBasket(product);
+    window.alert('Your product has been added to the cart!')
 
   }
 
