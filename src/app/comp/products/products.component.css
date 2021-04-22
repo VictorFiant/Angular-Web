@@ -1,10 +1,23 @@
-.image_prod {
-    width: 100%;
-  }
-  .example-card {
-    max-width:700px;
-  }
-  .example-header-image {
-    background-image: image();
-    background-size: cover;
-  }
+.mat-card{
+  max-width: 400px;
+  margin: auto;
+  top: 50px;
+  border-radius: 5px;
+  behavior: initial;
+}
+.mat-card-actions{
+  display: flex;
+}
+.mat-card-actions .flex-spacer{
+  width: 100%;
+}
+.mat-card-img {
+  max-width: 100%;
+  max-height: 400px;
+  
+  
+  left: 0px;
+    
+  object-fit: cover;
+  object-position: center center;
+}

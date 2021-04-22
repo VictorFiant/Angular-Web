@@ -1,12 +1,17 @@
-<ng-container *ngIf="product">
-  <p>{{ product.name }}</p>
-  <p>{{ product.price | currency }}</p>
-  <p>{{ product.description }}</p>
-</ng-container>
-<mat-card-actions>
-  <button color="warn" mat-raised-button (click)="addToBasket(product)">
-    <span class=" material-icons">
-      add_shopping_cart
-    </span>
-  </button>
-</mat-card-actions>
+<mat-card *ngIf="product">
+  <mat-card-header>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="'assets/images/' + product.id + '.jpg'">
+  <mat-card-content>
+    {{ product.description }}
+  </mat-card-content>
+  <mat-card-actions>
+    <button color="warn" mat-raised-button (click)="addToBasket(product)">
+      <span class="material-icons">
+        add_shopping_cart
+      </span>
+    </button>
+  </mat-card-actions>
+</mat-card>
